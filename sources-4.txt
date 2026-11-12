@@ -1,0 +1,16 @@
+# id|cdn path|photographer (batch 4: training, warbirds, aerobatics, outback, careers; Unsplash License checked 13 Nov 2026)
+tyu4iyZCMkE|https://images.unsplash.com/photo-1775486750740-cb5070f05aa9|Will Haddock
+zhHY-7I9vWk|https://images.unsplash.com/photo-1775486779985-28f48d26500f|Will Haddock
+Z89b-kCrTxc|https://images.unsplash.com/photo-1769780583221-6c7d1e63a967|Will Haddock
+9p7c31tM-nE|https://images.unsplash.com/photo-1551520133-9e6d5eacaedb|Daniel Eledut
+2Klb6uh_6MI|https://images.unsplash.com/photo-1564404084501-2d2905d8808e|Daniel Eledut
+Ra3ppd6Z0sQ|https://images.unsplash.com/photo-1564404085728-794eb3ebb67a|Daniel Eledut
+y1tZi6FHqJE|https://images.unsplash.com/photo-1644095267897-39ca7730c094|Stephanie Klepacki
+9LxwQr12bZI|https://images.unsplash.com/photo-1482704157227-051f9cd78de8|Hans Dorries
+7ZaFhK3LNVE|https://images.unsplash.com/photo-1487692703274-4965f352a3ef|Lacie Cueto
+7236QwVDenE|https://images.unsplash.com/photo-1703319952676-9d4be99b6588|William Warby
+P99gS7PrOOI|https://images.unsplash.com/photo-1702304235652-dabdfc5b03c4|Elliot Cullen
+zCERTvoeXpI|https://images.unsplash.com/photo-1763359427638-5a0b34ac1171|Iain
+4LJh9TAcImw|https://images.unsplash.com/photo-1611564393101-b834b74a9b48|Dylan Shaw
+TzzObE5tYgk|https://images.unsplash.com/photo-1789273496106-d49f1a34e235|Abraham Hughes
+HO8G_3ba4SE|https://images.unsplash.com/photo-1692128236180-8d27c7e0a1d4|Eric Prouzet
