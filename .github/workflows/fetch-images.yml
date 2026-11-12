@@ -1,0 +1,42 @@
+name: Fetch images
+on:
+  push:
+    paths:
+      - images.txt
+      - .github/workflows/fetch-images.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ImageMagick if missing
+        run: command -v convert || (sudo apt-get update && sudo apt-get install -y imagemagick)
+      - name: Download, resize and credit
+        run: |
+          mkdir -p images
+          echo "# Credits" > CREDITS.md
+          echo "" >> CREDITS.md
+          echo "All photos from Unsplash under the Unsplash License (https://unsplash.com/license)." >> CREDITS.md
+          echo "" >> CREDITS.md
+          grep -v '^#' images.txt | while read -r id; do
+            [ -z "$id" ] && continue
+            if [ ! -f "images/$id.jpg" ]; then
+              if curl -fsSL "https://unsplash.com/photos/$id/download?force=true" -o "/tmp/$id"; then
+                convert "/tmp/$id" -auto-orient -resize '2400x2400>' -quality 82 "images/$id.jpg" || echo "convert failed $id"
+              else
+                echo "download failed $id"
+              fi
+            fi
+            title=$(curl -fsSL "https://unsplash.com/photos/$id" | grep -o '<meta property="og:title" content="[^"]*"' | head -1 | sed 's/.*content="//; s/"$//')
+            echo "- $id: ${title:-credit to confirm} (https://unsplash.com/photos/$id)" >> CREDITS.md
+          done
+      - name: Commit
+        run: |
+          git config user.name "altitude-image-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add images CREDITS.md
+          git diff --cached --quiet || git commit -m "Fetch images and credits"
+          git push
