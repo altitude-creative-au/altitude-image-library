@@ -1,0 +1,35 @@
+name: Fetch images from CDN
+on:
+  push:
+    paths:
+      - sources.txt
+      - .github/workflows/fetch-cdn.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and credit
+        shell: bash
+        run: |
+          mkdir -p images
+          { echo "# Credits"; echo; echo "All photos from Unsplash under the Unsplash License (https://unsplash.com/license)."; echo; } > CREDITS.md
+          while IFS='|' read -r id base credit; do
+            [ -z "$id" ] && continue
+            case "$id" in \#*) continue;; esac
+            if [ ! -s "images/$id.jpg" ]; then
+              curl -fsSL "$base?w=2400&q=82&fm=jpg&fit=max" -o "images/$id.jpg" || { echo "failed $id"; rm -f "images/$id.jpg"; }
+            fi
+            echo "- $id: Photo by $credit on Unsplash (https://unsplash.com/photos/$id)" >> CREDITS.md
+          done < sources.txt
+          ls -la images
+      - name: Commit
+        run: |
+          git config user.name "altitude-image-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add images CREDITS.md
+          git diff --cached --quiet || git commit -m "Fetch images from CDN with credits"
+          git push
