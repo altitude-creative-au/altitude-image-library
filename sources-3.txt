@@ -1,0 +1,14 @@
+# id|cdn path|photographer (batch 3: destinations; location and Unsplash License checked on each photo page, 13 Nov 2026)
+M86ya5wyx8Y|https://images.unsplash.com/photo-1539922289330-2c9728ee7202|M.Fildza Fadzil
+KT2_g-tYm10|https://images.unsplash.com/photo-1730810764464-339e97fd2b95|Francesca Riverso
+YbyDZH29kXA|https://images.unsplash.com/photo-1735547072387-7000a85e4fc2|Steven Watson
+EQRTs_I9Jq8|https://images.unsplash.com/photo-1664970925595-90402bf3fbcb|Arie Oldman
+v-eHaTjC7t4|https://images.unsplash.com/photo-1742016977868-5e88ae881f06|Serina Bird
+DkKlpKE2lBE|https://images.unsplash.com/photo-1652397144274-1923a97f4f1a|Lucas Hunter
+YNsGBJ4kUYY|https://images.unsplash.com/photo-1698754403631-a3ca8f9999d1|RE Walsh
+nj5poJQcAI4|https://images.unsplash.com/photo-1731215750833-2536c4a21046|Kshithij Chandrashekar
+SU0UrwEc8BM|https://images.unsplash.com/photo-1730628798251-ba711fd11f3d|Kshithij Chandrashekar
+a3oc7WQqJso|https://images.unsplash.com/photo-1703822267347-ad80a91abb00|Sheila C
+-nlsY5izShU|https://images.unsplash.com/photo-1689403175920-c18cf0dbb1b5|Geoff Brooks
+FXEaV3aEQW8|https://images.unsplash.com/photo-1612953293239-4befdc359b72|Jamie Davies
+2GxbBqGHXvs|https://images.unsplash.com/photo-1612953413885-9af4fa10f935|Jamie Davies
